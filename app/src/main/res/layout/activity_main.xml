@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlv1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/rectangle"
+        android:id="@+id/view" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CurrencyCode"
+        android:textSize="18sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="35dp"
+        android:text="INR"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FinalAmount_textview"
+        android:layout_marginLeft="25dp"
+        android:textSize="42sp"
+        android:layout_marginTop="60dp"
+        android:text="000.00"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Stocks_TextView"
+        android:textSize="18sp"
+        android:text="Stocks"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/view"
+/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="7"
+        android:id="@+id/stock_editText"
+        android:layout_alignBottom="@+id/Stocks_TextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="31dp"
+        android:text="StockSymbol"
+        android:id="@+id/StockSymbol"
+        android:layout_below="@id/Stocks_TextView"
+        android:layout_alignLeft="@+id/Stocks_TextView"
+        android:layout_alignStart="@+id/Stocks_TextView" />
+    <AutoCompleteTextView
+        android:id="@+id/StockSymbol_autoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADBE"
+        android:ems="7"
+        android:layout_alignBottom="@+id/StockSymbol"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Stock Trader"
+        android:id="@+id/StockTrader"
+        android:layout_marginTop="31dp"
+        android:layout_below="@id/StockSymbol"
+        android:layout_alignLeft="@id/StockSymbol"
+        android:layout_alignStart="@id/StockSymbol"
+        />
+    <AutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-Trade"
+        android:id="@+id/StockTrader_AutoCompleteTextView"
+        android:layout_alignBottom="@id/StockTrader"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@id/StockSymbol_autoCompleteTextView"
+        android:layout_alignStart="@id/StockSymbol_autoCompleteTextView"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/Bank"
+        android:text="Bank"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="31dp"
+        android:layout_below="@id/StockTrader"
+        android:layout_alignLeft="@id/StockTrader"
+        android:layout_alignStart="@id/StockTrader"/>
+    <AutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Bank_AutoCompleteTextView"
+        android:layout_alignBottom="@+id/Bank"
+        android:text="HDFC"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@id/StockSymbol_autoCompleteTextView"
+        android:layout_alignStart="@id/StockSymbol_autoCompleteTextView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/LocalCurrency"
+        android:text="Local Currency"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="31dp"
+        android:layout_below="@id/Bank"
+        android:layout_alignLeft="@id/Bank"
+        android:layout_alignStart="@id/Bank"/>
+    <AutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LocalCurrency_AutoCompleteTextView"
+        android:layout_alignBottom="@+id/LocalCurrency"
+        android:text="INR"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@id/Bank_AutoCompleteTextView"
+        android:layout_alignStart="@id/Bank_AutoCompleteTextView"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/LocalCurrency_AutoCompleteTextView"
+        android:layout_alignStart="@+id/LocalCurrency_AutoCompleteTextView" />
+
+</RelativeLayout>
+
+
